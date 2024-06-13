@@ -217,7 +217,7 @@ import {
         },
       ],
       image: codex,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/nehalp13/codex",
     },
     {
       name: "Multi-Cloud Deployment",
@@ -238,7 +238,7 @@ import {
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://medium.com/@nehalpatel2001/azure-vms-and-hestiacp-integration-streamlining-your-website-server-management-0a08fc6ec88b",
     },
     {
       name: "Trip Agency Site",
@@ -259,7 +259,7 @@ import {
         },
       ],
       image: tripagency,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://travel-agency-nehalp13.vercel.app",
     },
   ];
   
