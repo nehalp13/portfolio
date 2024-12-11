@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        As an adept cloud developer proficient in AWS, GCP, and Azure, alongside mastery in frameworks such as React, Node.js, Three.js, and .NET Core, I specialize in crafting solutions tailored to your needs. My commitment to rapid learning enables me to adapt swiftly, while my collaborative approach ensures close alignment with clients' needs. Together, we can develop efficient, scalable, and intuitive solutions that effectively address real-world challenges. Let's join forces to transform your ideas into tangible realities! 🚀
+        As a versatile software engineer proficient in Python, Java, and C#, with expertise in frameworks like Flask, React, Node.js, and .NET Core, I excel in designing scalable, high-quality solutions. With advanced skills in cloud platforms such as AWS, GCP, and Azure, I specialize in creating efficient applications tailored to meet diverse needs. My problem-solving mindset, and passion for continuous learning drive me to transform complex challenges into innovative, user-centric software. Let's bring your vision to life! 🚀
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

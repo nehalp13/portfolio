@@ -3,9 +3,11 @@ import awsclf from "./aws-clf.png";
 import az900 from "./az-900.png";
 import sc900 from "./sc-900.png";
 import pl900 from "./pl-900.png";
+import dp100 from "./dp100.png";
 import web_developer from "./web_developer.png";
-import backend_developer from "./backend_developer.png";
+import software_engineer from "./software_engineer.png";
 import cloud from "./cloud.png";
+import backend_engineer from "./backend_engineer.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -26,10 +28,13 @@ import threejs from "./tech/threejs.svg";
 
 import intel from "./company/intel.png";
 import m19 from "./company/m19.png"
+import cognixia from "./company/cognixia.png";
 
 import codex from "./codex.png";
 import jobit from "./jobit.png";
 import tripagency from "./tripagency.png";
+import progresstracker from "./progresstracker.png";
+import pandaspizzeria from "./pandaspizzeria.png";
 
 export {
   logo,
@@ -37,9 +42,11 @@ export {
   az900,
   sc900,
   pl900,
+  dp100,
   web_developer,
   cloud,
-  backend_developer,
+  software_engineer,
+  backend_engineer,
   github,
   menu,
   close,
@@ -58,7 +65,10 @@ export {
   threejs,
   intel,
   m19,
+  cognixia,
   codex,
   jobit,
   tripagency,
+  progresstracker,
+  pandaspizzeria,
 };

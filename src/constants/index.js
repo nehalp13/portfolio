@@ -1,11 +1,14 @@
+import { title } from "framer-motion/client";
 import {
     awsclf,
     az900,
     sc900,
     pl900,
+    dp100,
     web_developer,
     cloud,
-    backend_developer,
+    software_engineer,
+    backend_engineer,
     aws,
     gcp,
     azure,
@@ -20,9 +23,12 @@ import {
     git,
     m19,
     intel,
+    cognixia,
     codex,
     jobit,
     tripagency,
+    progresstracker,
+    pandaspizzeria,
     threejs,
   } from "../assets";
   
@@ -51,16 +57,20 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web_developer,
+      title: "Software Engineer",
+      icon: software_engineer,
     },
     {
       title: "Cloud Developer",
       icon: cloud,
     },
     {
-      title: "Backend Developer",
-      icon: backend_developer,
+      title: "Backend Engineer",
+      icon: backend_engineer,
+    },
+    {
+      title: "Web Developer",
+      icon: web_developer,
     },
     // {
     //   title: "Content Creator",
@@ -137,44 +147,60 @@ import {
   
   const experiences = [
     {
-      title: "Cloud Developer",
+      title: "Backend Engineer",
+      company_name: "Cognixia",
+      icon: cognixia,
+      iconBg: "#E6DEDD",
+      date: "September 2024 - Present",
+      points: [
+        "Developed a CRUD based Progress Tracker full stack application with robust business logic in Python.",
+        "Used Pandas to structure user data and track progress metrics.",
+        "NumPy was applied for mathematical computations, such as calculating progress percentages or ratings.",
+        "Structured data in MySQL, applied SQLAlchemy for ORM, and built custom database connections using Jupyter Notebooks for data seeding.",
+        "Implemented features like user authentication, progress tracking, real-time updates and advanced querying.",
+      ]
+    },
+    {
+      title: "Software Engineer",
       company_name: "M19 Material Intelligence Lab",
       icon: m19,
       iconBg: "#01061a",
-      date: "August 2023 - Present",
+      date: "June 2023 - August 2024",
       points: [
-        "Provisioned and managed infrastructure using GCP and Firebase, ensuring efficient and reliable deployment of resources.",
-        "Engineered Google Cloud Functions-based REST endpoints to efficiently generate JSON payloads sourced from our Firestore database system.",
-        "Rigorous Postman testing of APIs ensuring reliable and smooth operation",
-        "Integrated GCP with NoSQL database",
-        "Implemented robust API security measures using gcloud auth with bearer token authentication, ensuring confidentiality of web application's data.",
-        "Used Cloud Functions to effortlessly notify stakeholders about product quotations",
-        "Worked with database integration of NoSQL Firebase Firestore database with MVC .NET Core web application.",
-        "Acquired proficiency in utilizing frameworks, implementing data structures, and developing modules.",
-        "Automated email notifications using Firebase Trigger Events",
-        "Employed Firebase Authentication to enhance the sign-in and onboarding process for end users.",
-        "Established and managed Google Analytics to track website traffic and user activity, informing strategic decisions.",
-        "Successfully deployed web application using Firebase Hosting, ensuring reliability and scalability for end users.",
-        "Proficiently trained WotNot for chatbot functionality and executing Mailchimp automations for effective campaigns and newsletters.",
-        "Facilitated collaboration between development teams and R&D, optimizing system performance.",
+        "Built an e-commerce for lab data dashboard utilizing Razor Pages in .NET Core, employing C# and HTML.",
+        "Engineered Google Cloud Function based REST endpoints to create JSON payloads, sourced from Firebase Firestore (NoSQL) database and tested API on Postman.",
+        "Configured Firewalls and routing protocols to optimize security and network performance.",
+        "Executed Google Ads campaigns that increased brand awareness and generated a 15% lead.",
+        "Deployed Kubernetes Engine to containerize and manage data processing applications.",
+        "Monitored network system using CURL to analyze data flow across LAN/WAN networks, reducing troubleshooting time by 30%.",
+        "Troubleshot DNS failures and HTTP/s connectivity issues for clients.",
+        "Integrated Google Analytics for tracking and reporting website traffic and increased business revenue by 45%.",
+        "Managed Pub/Sub to facilitate real-time messaging and data streaming between microservices.",
+        "Executed Trigger Events to automate emails based on data entries, Firebase Authentication for secure user sign-in.",
+        "Configured scalable data pipelines using Google Cloud Storage (GCS) for seamless ingestion and data storage.",
       ],
     },
     {
-      title: "Industrial Trainee",
+      title: "Python Web Developer",
       company_name: "Intel",
       icon: intel,
       iconBg: "#E6DEDD",
       date: "May 2023 - July 2023",
       points: [
-        "Leveraged MoRTH data to identify accident hotspots on road networks, maintaining a refined CSV dataset of coordinates.",
-        "Led the development of a web application mapping using GIS tools like Leaflet, enhancing geographical insights.",
-        "Seamlessly integrated Python's Folium and Pandas libraries to overlay accident blackspot data onto Gujarat's geographical map.",
-        "Applied spatial data techniques to locate nearby hospitals using CSV data, showcasing adeptness in spatial analysis and visualization.",
+        "Exploited MoRTH data for pinpointing accident locations on road networks.",
+        "Spearheaded the development of a web mapping application, incorporating Leaflet-GIS tool.",
+        "Seamlessly integrated Python's Folium and Pandas libraries for robust mapping capabilities.",
+        "Acquired practical expertise in spatial data applications, leveraging CSV data to pinpoint nearby hospitals.",
       ],
     },
   ];
   
   const badges = [
+    {
+      title: "DP-100",
+      icon: dp100,
+      badge_link: "https://learn.microsoft.com/api/credentials/share/en-us/NehalPatel-4820/38F7D17971381625?sharingId=7B3DCF1E72BE8B4C",
+    },
     {
       title: "CLF-C02",
       icon: awsclf,
@@ -183,21 +209,63 @@ import {
     {
       title: "AZ-900",
       icon: az900,
-      badge_link: "https://www.credly.com/badges/51fa4bd1-daf2-49e4-a93c-876cbf830211/public_url",
+      badge_link: "https://learn.microsoft.com/api/credentials/share/en-us/NehalPatel-4820/C2BA13CD1148F3E3?sharingId=7B3DCF1E72BE8B4C",
     },
     {
       title: "SC-900",
       icon: sc900,
-      badge_link: "https://www.credly.com/badges/efe5ff48-4d6f-4437-93be-593e2110703b/public_url",
+      badge_link: "https://learn.microsoft.com/api/credentials/share/en-us/NehalPatel-4820/A8FBDBF35FAE4CE?sharingId=7B3DCF1E72BE8B4C",
     },
     {
       title: "PL-900",
       icon: pl900,
-      badge_link: "https://www.credly.com/badges/88a7744d-f91e-4b6f-af62-3b6356ac64bb/public_url",
+      badge_link: "https://learn.microsoft.com/api/credentials/share/en-us/NehalPatel-4820/7B1ADBFA054C78FD?sharingId=7B3DCF1E72BE8B4C",
     },
   ];
   
   const projects = [
+    {
+      name: "Progress Tracker",
+      description: 
+        "Created a comprehensive Progress Tracker application featuring a CRUD architecture, integrating Python for core logic and tools for advanced data handling. Implemented database solutions with SQLAlchemy for seamless interactions and utilized Jupyter Notebooks for efficient data initialization.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "sqlalchemy",
+          color: "green-text-gradient",
+        },
+        {
+          name: "jupyter_notebooks",
+          color: "pink-text-gradient",
+        }
+      ],
+      image: progresstracker,
+      source_code_link: "https://github.com/nehalp13/CapstoneProject",
+    },
+    {
+      name: "Pandas Pizzeria - Data Analysis",
+      description: 
+        "Aggregated and transformed multiple CSV datasets into a unified dataframe using Pandas to analyze sales patterns. Generated detailed statistical summaries and visualized customer behavior and seasonal trends for actionable insights.",
+      tags: [
+        {
+          name: "python",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "data_analytics",
+          color: "green-text-gradient",
+        },
+        {
+          name: "jupyter_notebooks",
+          color: "pink-text-gradient",
+        }
+      ],
+      image: pandaspizzeria,
+      source_code_link: "https://github.com/nehalp13/PandasPizzeria-DataAnalysis",
+    },
     {
       name: "Codex",
       description:

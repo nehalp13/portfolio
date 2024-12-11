@@ -5,20 +5,30 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./cloud/scene.gltf");
+  const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
-      {/* <hemisphereLight intensity={2} groundColor='white' /> */}
-      <hemisphereLight intensity={2} groundColor='#0477BF' />
-      <spotLight
-        // position={[3, -4, 2]}
+      <hemisphereLight intensity={0.15} groundColor='black' />
+      <ambientLight
+          // position={isMobile ? [0, -3, -4] : [2, -2.5, 1]}
+          // intensity={20}
         // color={'#0477BF'}
-        // angle={90}
+        // position={isMobile ? [0, -3, -4] : [0, -3.25, -3]}
+        // color={'#0477BF'}
+          // angle={85}
         // penumbra={10}
         // intensity={1}
         // castShadow
         // shadow-mapSize={1024}
+        position={isMobile ? [0, -3, -4] : [2.3, -1.5, 0]} // Light source above the primitive
+        angle={Math.PI / 9}  // 60-degree spread
+        penumbra={4}       // Softer edges
+        intensity={3}      // Adequate brightness
+        distance={15}        // Light falls off after 15 units
+        // castShadow={true} 
+
+
         // position={[-20, 50, 10]}
         // angle={0.12}
         // penumbra={1}
@@ -27,19 +37,14 @@ const Computers = ({ isMobile }) => {
         // shadow-mapSize={1024}
       />
       <pointLight 
-        color={'#0477BF'}
-        intensity={7} 
-        position={isMobile? [5.5, -2, 0]: [8, -3, 3]}
+        // intensity={1} 
+        // position={isMobile ? [] : [0, -1, 0]}
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.009 : 0.015}
-        position={isMobile ? [2.5, -4, -2.2] : [3, -6, 0]}
-        rotation={isMobile ? [0, 0.45, 0] : [0, 0.43, 0]}
-        // object={computer.scene}
-        // scale={isMobile ? 0.7 : 0.7}
-        // position={isMobile ? [0, -3, -2.2] : [0, -3.75, -1.5]}
-        // rotation={[-0.01, -0.2, -0.1]}
+        scale={isMobile ? 0.4 : 0.65}
+        position={isMobile ? [-3, -2, -2.2] : [0, -3.25, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
   );
@@ -74,8 +79,7 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      // camera={{ position: [20, 3, 5], fov: 25 }}
-      camera={{ position: [20, 3, 25], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -83,11 +87,6 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          target={isMobile ? [3.5, 0, -2.2] : [4, 0, 0]}
-          // autoRotate={true}
-          // autoRotateSpeed={10}
-          // minAzimuthAngle={Math.PI / 5}
-          // maxAzimuthAngle={Math.PI / 2}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
@@ -96,5 +95,4 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
-
 export default ComputersCanvas;
